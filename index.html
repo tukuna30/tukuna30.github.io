@@ -76,291 +76,332 @@
         span.bold {
             font-weight: 600;
         }
+
+        body.github {
+            font-size: 18px;
+            line-height: 1.2;
+            background-color: #f5f6fa
+        }
+
+        #main-container {
+            padding: 15px; 
+            position: relative; 
+            display: flex; 
+            flex-direction: column;
+            width: 920px;
+        }
+        body.github  #main-container {
+            flex-direction: row;
+            width: unset;
+        }
+        .right-section {
+            display: flex; 
+            padding-left: 40px;
+        }
+        .right-section .first-row {
+            width: 65%;
+        }
+
+        body.github .right-section {
+            display: block;
+            padding-left: 0;
+            margin-top: 105px;
+        }
+
+        body.github .right-section .first-row {
+            width: unset;
+        }
+        body.github .section.section-without-border {
+            padding-left: 0;
+        }
+
+        @keyframes highlight {
+            0% { box-shadow: 0 0 0 0px rgba(255, 66, 00, 1) }
+            70% { box-shadow: 0 0 0 10px rgba(255, 66, 00, 0)}
+            100% { box-shadow: 0 0 0 0px rgba(255, 66, 00, 0) }
+        }
+        body.github .skill {
+            animation: highlight 2s infinite;
+        }
     </style>
 </head>
 
-<body>
-    <div id="creatorContainer" style="width: 920px;">
-        <div>
+<body class='github'>
+    <div id='main-container'>
+        <div style="padding-left: 85px">
             <div>
-                <div style="padding: 15px; position: relative; display: flex; flex-direction: column;">
-                    <div style="padding-left: 85px">
-                        <div>
-                            <div class="entry" style="display: flex;">
-                                <div>
-                                    <img src="my profile pic.jpg" style="width: 80px; border-radius: 50%;" />
-                                </div>
-                                <div style="margin: 25px;">
-                                    <h2 style='margin: 0;'>
-                                        <span class="firstname">Tukuna</span>
-                                        <span class="lastname">Patro</span>
-                                    </h2>
-                                    <h3 style='margin: 0;'>Senior Development Engineer</h3>
-                                </div>
-                            </div>
+                <div class="entry" style="display: flex;">
+                    <div>
+                        <img src="my profile pic.jpg" style="width: 80px; border-radius: 50%;" />
+                    </div>
+                    <div style="margin: 25px;">
+                        <h2 style='margin: 0;'>
+                            <span class="firstname">Tukuna</span>
+                            <span class="lastname">Patro</span>
+                        </h2>
+                        <h3 style='margin: 0;'>Senior Development Engineer</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="title">
+                    <span class="icon">
+                        <img src="summary icon.svg" />
+                    </span>
+                    <span class="txt">Summary</span>
+                </h3>
+                <div class="content">
+                    <div class="entry" style="position: relative">
+                        <div class="pointer"></div>
+                        <div class="text">
+                            <p> Self driven web developer with with
+                                <span class='bold'>5+</span> years of experience in product development. Hands on experience in building performant
+                                Single Page Apps using AngularJs, ReactJs, JavaScript, jQuery, CSS3, HTML5, Node.js and Express.
+                                Highly motivated team player with strong communication and inter-personal skills. Strictly
+                                follow TDD.
+                            </p>
                         </div>
-                        <div class="section">
-                            <h3 class="title">
-                                <span class="icon">
-                                    <img src="summary icon.svg" />
-                                </span>
-                                <span class="txt">Summary</span>
-                            </h3>
-                            <div class="content">
-                                <div class="entry" style="position: relative">
-                                    <div class="pointer"></div>
-                                    <div class="text">
-                                        <p> Self driven web developer with with
-                                            <span class='bold'>5+</span> years of experience in product development. Hands on experience in
-                                            building performant Single Page Apps using AngularJs, ReactJs, JavaScript, jQuery,
-                                            CSS3, HTML5, Node.js and Express. Highly motivated team player with strong communication
-                                            and inter-personal skills. Strictly follow TDD.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section sectionExperience">
+                <h3 class="title">
+                    <span class="icon">
+                        <img src="experience icon.svg" />
+                    </span>
+                    <span class="txt">Experience</span>
+                </h3>
+                <div>
+                    <div class="entry" style="min-height: 36px; position: relative;">
+                        <div class="pointer"></div>
+                        <div class="dates">
+                            <span>01-2015</span>
+                            <span>-</span>
+                            <span>Present</span>
                         </div>
-                        <div class="section sectionExperience">
-                            <h3 class="title">
-                                <span class="icon">
-                                    <img src="experience icon.svg" />
-                                </span>
-                                <span class="txt">Experience</span>
-                            </h3>
-                            <div>
-                                <div class="entry" style="min-height: 36px; position: relative;">
-                                    <div class="pointer"></div>
-                                    <div class="dates">
-                                        <span>01-2015</span>
-                                        <span>-</span>
-                                        <span>Present</span>
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">Senior Development Engineer</h4>
-                                        <h5>Pramati Technologies Pvt. Ltd.</h5>
-                                        <div class="text">
-                                            <p>
-                                                <b>Responsibilities:</b>
-                                            </p>
-                                            <ul>
-                                                <li>Write high quality, maintainable and robust code in ES5, AngularJS.</li>
-                                                <li>Collaborate with POs, UX team to implement new features.</li>
-                                                <li>Develop clean, structured, bug free, to the point code with a keen eye for
-                                                    details.</li>
-                                                <li>Participate in sprint planning meetings, mentor junior developers.</li>
-                                                <li>Automate tasks using Grunt, Webpack, modularise code by RequireJs.</li>
-                                                <li>Write promise based JS services.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="min-height: 36px; position: relative;">
-                                    <div class="pointer"></div>
-                                    <div class="dates">
-                                        <span>10-2012</span>
-                                        <span>-</span>
-                                        <span>12-2014</span>
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">Web Developer</h4>
-                                        <h5>Tikkl Technologis India Pvt. Ltd.</h5>
-                                        <div class="text">
-                                            <p>
-                                                <b>Responsibilities:</b>
-                                            </p>
-                                            <ul>
-                                                <li>Open up Web API end points using Ruby 2 in Rails 4 environment.</li>
-                                                <li>Follow TDD style of development by writing unit tests, automate integration
-                                                    tests in JS using jasmine-node (webdriverjs, selenium) while making any
-                                                    model or view changes.</li>
-                                                <li>Automate tasks using Grunt.</li>
-                                                <li>Design and code reusable components with complete unit tests using jQuery
-                                                    for cross browser environments.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section sectionEducation">
-                            <h3 class="title">
-                                <span class="icon">
-                                    <img src="education icon.svg" />
-                                </span>
-                                <span class="txt">Education</span>
-                            </h3>
-                            <div>
-                                <div class="entry" style="min-height: 18px; position: relative;">
-                                    <div class="pointer"></div>
-                                    <div class="dates" style="margin-top: 1px;">
-                                        <span>2009</span>
-                                        <span>-</span>
-                                        <span>2012</span>
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">Sambalpur University</h5>
-                                            <div class="text">
-                                                <div>
-                                                    Master in Computer Application,
-                                                    <span class='bold'>82%</span>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                                <div class="entry" style="min-height: 18px; position: relative;">
-                                    <div class="pointer"></div>
-                                    <div class="dates" style="margin-top: 1px;">
-                                        <span>2006</span>
-                                        <span>-</span>
-                                        <span>2009</span>
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">Berhampur University</h5>
-                                            <div class="text">
-                                                <div>
-                                                    B.Sc. Computer Science,
-                                                    <span class='bold'>71%</span>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
+                        <div class="content">
+                            <h4 class="title">Senior Development Engineer</h4>
+                            <h5>Pramati Technologies Pvt. Ltd.</h5>
+                            <div class="text">
+                                <p>
+                                    <b>Responsibilities:</b>
+                                </p>
+                                <ul>
+                                    <li>Write high quality, maintainable and robust code in ES5, AngularJS.</li>
+                                    <li>Collaborate with POs, UX team to implement new features.</li>
+                                    <li>Develop clean, structured, bug free, to the point code with a keen eye for details.
+                                    </li>
+                                    <li>Participate in sprint planning meetings, mentor junior developers.</li>
+                                    <li>Automate tasks using Grunt, Webpack, modularise code by RequireJs.</li>
+                                    <li>Write promise based JS services.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div style="display: flex; padding-left: 40px;">
-                        <div class='first-row' style='width: 65%'>
-                            <div class="section section-without-border">
-                                <h3 class="title">
-                                    <span class="icon">
-                                        <img src="skills icon.svg" />
-                                    </span>
-                                    <span class="txt">Skills</span>
-                                </h3>
-                                <div class="content">
+                    <div style="min-height: 36px; position: relative;">
+                        <div class="pointer"></div>
+                        <div class="dates">
+                            <span>10-2012</span>
+                            <span>-</span>
+                            <span>12-2014</span>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Web Developer</h4>
+                            <h5>Tikkl Technologis India Pvt. Ltd.</h5>
+                            <div class="text">
+                                <p>
+                                    <b>Responsibilities:</b>
+                                </p>
+                                <ul>
+                                    <li>Open up Web API end points using Ruby 2 in Rails 4 environment.</li>
+                                    <li>Follow TDD style of development by writing unit tests, automate integration tests in
+                                        JS using jasmine-node (webdriverjs, selenium) while making any model or view changes.</li>
+                                    <li>Automate tasks using Grunt.</li>
+                                    <li>Design and code reusable components with complete unit tests using jQuery for cross browser
+                                        environments.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section sectionEducation">
+                <h3 class="title">
+                    <span class="icon">
+                        <img src="education icon.svg" />
+                    </span>
+                    <span class="txt">Education</span>
+                </h3>
+                <div>
+                    <div class="entry" style="min-height: 18px; position: relative;">
+                        <div class="pointer"></div>
+                        <div class="dates" style="margin-top: 1px;">
+                            <span>2009</span>
+                            <span>-</span>
+                            <span>2012</span>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Sambalpur University</h5>
+                                <div class="text">
                                     <div>
-                                        <div class="pointer"></div>
-                                        <ul class='bold'>
-                                            <li>
-                                                ES6, AngularJS, Angular, ReactJS, HTML5, CSS, jQuery, Ajax, Promises, Bootstrap, Grunt, Webpack
-                                            </li>
-                                            <li>
-                                                NodeJS, Express
-                                            </li>
-                                            <li>
-                                                Jasmine, Protractor, Selenium
-                                            </li>
-
-                                            <li>
-                                                AWS EC2, S3, DynamoDB, Jenkins, CircleCI
-                                            </li>
-
-                                            <li>
-                                                git, Jira
-                                            </li>
-                                        </ul>
-
+                                        Master in Computer Application,
+                                        <span class='bold'>82%</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="section section-without-border">
-                                <h3 class="title">
-                                    <span class="icon">
-                                        <img src="projects icon.svg" />
-                                    </span>
-                                    <span class="txt">Projects</span>
-                                </h3>
-                                <div class="content">
+                        </div>
+                    </div>
+                    <div class="entry" style="min-height: 18px; position: relative;">
+                        <div class="pointer"></div>
+                        <div class="dates" style="margin-top: 1px;">
+                            <span>2006</span>
+                            <span>-</span>
+                            <span>2009</span>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Berhampur University</h5>
+                                <div class="text">
                                     <div>
-                                        <div class="pointer"></div>
-                                        <ul>
-                                            <li>
-                                                <span class='bold'>A360</span>, a SAAS product from Autodesk
-                                                <a href="https://a360.autodesk.com">a360.autodesk.com</a>
-                                            </li>
-                                            <li>
-                                                <span class='bold'>Smart CDE</span>, enterprise product for AJG
-                                                <a href="https://www.ajg.com/">ajg.com</a>
-                                            </li>
-                                            <li>
-                                                <span class='bold'>Tikkl</span>, a SASS product to manage Event Marketing
-                                                <a href="https://tikkl.com">tikkl.com</a>
-                                            </li>
-                                            <li>
-                                                <span class='bold'>Test AWS</span>, my personal project
-                                                <div>
-                                                    <a href="https://github.com/tukuna30/test_aws">github.com/tukuna30/test_aws</a>
-                                                    <a href="https://myodisha.xyz">  https://myodisha.xyz</a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                        B.Sc. Computer Science,
+                                        <span class='bold'>71%</span>
                                     </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='right-section'>
+            <div class='first-row'>
+                <div class="section section-without-border">
+                    <h3 class="title">
+                        <span class="icon skill">
+                            <img src="skills icon.svg" />
+                        </span>
+                        <span class="txt">Skills</span>
+                    </h3>
+                    <div class="content">
+                        <div>
+                            <div class="pointer"></div>
+                            <ul class='bold'>
+                                <li>
+                                    ES6, AngularJS, Angular, ReactJS, HTML5, CSS, jQuery, Ajax, Promises, Bootstrap, Grunt, Webpack
+                                </li>
+                                <li>
+                                    NodeJS, Express
+                                </li>
+                                <li>
+                                    Jasmine, Protractor, Selenium
+                                </li>
+
+                                <li>
+                                    AWS EC2, S3, DynamoDB, Jenkins, CircleCI
+                                </li>
+
+                                <li>
+                                    git, Jira
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="section section-without-border">
+                    <h3 class="title">
+                        <span class="icon">
+                            <img src="projects icon.svg" />
+                        </span>
+                        <span class="txt">Projects</span>
+                    </h3>
+                    <div class="content">
+                        <div>
+                            <div class="pointer"></div>
+                            <ul>
+                                <li>
+                                    <span class='bold'>A360</span>, a SAAS product from Autodesk
+                                    <a href="https://a360.autodesk.com">a360.autodesk.com</a>
+                                </li>
+                                <li>
+                                    <span class='bold'>Smart CDE</span>, enterprise product for AJG
+                                    <a href="https://www.ajg.com/">ajg.com</a>
+                                </li>
+                                <li>
+                                    <span class='bold'>Tikkl</span>, a SASS product to manage Event Marketing
+                                    <a href="https://tikkl.com">tikkl.com</a>
+                                </li>
+                                <li>
+                                    <span class='bold'>Test AWS</span>, my personal project
+                                    <div>
+                                        <a href="https://github.com/tukuna30/test_aws">github.com/tukuna30/test_aws</a>
+                                        <a href="https://myodisha.xyz"> https://myodisha.xyz</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='second-row'>
+                <div class="section section-without-border">
+                    <h3 class="title">
+                        <span class="icon">
+                            <img src="personal icon.svg" />
+                        </span>
+                        <span class="txt">Personal Info</span>
+                    </h3>
+                    <div class="content">
+                        <div>
+                            <div class="pointer"></div>
+                            <h5>Address</h5>
+                            <div>
+                                <div>2-56/H Chandanaik Thanda, Hyderabad
+                                    <br>
                                 </div>
                             </div>
                         </div>
-                        <div class='second-row'>
-                            <div class="section section-without-border">
-                                <h3 class="title">
-                                    <span class="icon">
-                                        <img src="personal icon.svg" />
-                                    </span>
-                                    <span class="txt">Personal Info</span>
-                                </h3>
-                                <div class="content">
-                                    <div>
-                                        <div class="pointer"></div>
-                                        <h5>Address</h5>
-                                        <div>
-                                            <div>2-56/H Chandanaik Thanda, Hyderabad
-                                                <br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="entry">
-                                        <div class="pointer"></div>
-                                        <div>
-                                            <span class='bold'>M</span>obile:-
-                                            <span>8297074155</span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="pointer"></div>
-                                        <br>
-                                        <div>
-                                            <a href="mailto:tukuna.patro@gmail.com" rel="nofollow" target="_blank">tukuna.patro@gmail.com</a>
-                                        </div>
-                                        <div>
-                                            <a href="https://github.com/tukuna30" target="_blank" rel="nofollow">github.com/tukuna30</a>
-                                        </div>
-                                        <div>
-                                            <a href="https://www.linkedin.com/in/tukunapatro" target="_blank" rel="nofollow">linkedin.com/in/tukunapatro</a>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="entry">
+                            <div class="pointer"></div>
+                            <div>
+                                <span class='bold'>M</span>obile:-
+                                <span>8297074155</span>
                             </div>
-                            <div class="section section-without-border">
-                                <h3 class="title">
-                                    <span class="icon">
-                                        <img src="activities icon.svg" />
-                                    </span>
-                                    <span class="txt">Activities</span>
-                                </h3>
-                                <div class="content">
-                                    <div>
-                                        <div class="pointer"></div>
-                                        <ul>
-                                            <li>
-                                                Cycling
-                                            </li>
-                                            <li>
-                                                Travelling
-                                            </li>
-                                            <li>
-                                                Reading
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                        <div>
+                            <div class="pointer"></div>
+                            <br>
+                            <div>
+                                <a href="mailto:tukuna.patro@gmail.com" rel="nofollow" target="_blank">tukuna.patro@gmail.com</a>
                             </div>
+                            <div>
+                                <a href="https://github.com/tukuna30" target="_blank" rel="nofollow">github.com/tukuna30</a>
+                            </div>
+                            <div>
+                                <a href="https://www.linkedin.com/in/tukunapatro" target="_blank" rel="nofollow">linkedin.com/in/tukunapatro</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section section-without-border">
+                    <h3 class="title">
+                        <span class="icon">
+                            <img src="activities icon.svg" />
+                        </span>
+                        <span class="txt">Activities</span>
+                    </h3>
+                    <div class="content">
+                        <div>
+                            <div class="pointer"></div>
+                            <ul>
+                                <li>
+                                    Cycling
+                                </li>
+                                <li>
+                                    Travelling
+                                </li>
+                                <li>
+                                    Reading
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
